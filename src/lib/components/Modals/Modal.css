@@ -1,0 +1,173 @@
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+.modalWrapper {
+    height: 100%;
+    left: 0;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+.modal {
+    background: #FFF;
+    border-radius: .625rem;
+    margin: 1.75rem auto;
+    max-width: 31.25rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 1050;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.modalCloseButton {
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: .3s;
+    opacity: 0.5;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.modalCloseButton:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.modalSection {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    max-height: 60vh; 
+    overflow-y: auto; /* Add vertical scrolling when content exceeds max height */
+    padding: 0 1rem;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+}
+
+.modalButton,
+.buttonDefault {
+    background: #cb3b06e4;
+    border: none;
+    border-radius: .5rem;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .8rem 1rem;
+    transition: .3s;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modalButton:hover,
+.buttonDefault:hover {
+    background: #ffffff;
+    color: #b04128f6;
+    outline: 2px solid #b04128f6;
+   
+}
+
+.buttonDefault {
+    margin-left: 1rem;
+}
+
+
+.dark-theme {
+    background-color: #333;
+ 
+  }
+  .scrollable-content {
+    max-height: 100px; /* Adjust the value based on your design */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
+    padding: 1rem; /* Add padding for scrolling space */
+    background: #b04128f6;
+    color: #ffffff
+  }
+  
+ 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .modal {
+      max-width: 90%; /* Adjust as needed */
+      margin: 1rem; /* Add some margin for smaller screens */
+    }
+    
+    .modalFooter {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      align-items: flex-start; /* Align buttons to the left on smaller screens */
+      margin: 1rem;
+    }
+  }
+  
+/* CSS for ResizableModal */
+.resizable-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: .625rem;
+    z-index: 1050;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+
+  .resizable-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: se-resize; /* Cursor indicates resizing */
+    background-color: #000;
+  }
+  
+  .resizable-modal .close-button {
+    background-color: #cb3b06e4;
+    border: none;
+    border-radius: .5rem;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .8rem 1rem;
+    transition: .3s;
+    margin-top: 1rem;
+  }
+  
+  .resizable-modal .close-button:hover {
+    background-color: #ffffff;
+    color: #b04128f6;
+  }
+  
+  img{
+    width: 100%;
+    height: 300px;
+  }
