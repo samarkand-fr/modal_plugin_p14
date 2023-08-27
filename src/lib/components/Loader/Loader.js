@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './Loader.css';
+import '../../styles/Loader.css';
 
 /**
  * Loader component to display a loading animation.

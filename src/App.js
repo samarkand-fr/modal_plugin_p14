@@ -1,9 +1,9 @@
 
 import Modal from './lib/components/Modals/Modal';
 import useModal from './lib/utils/useModal';
-import ResizableModal from './lib/components/Modals/ResizableModal/ResizableModal'
-import CustomScrollingModal from './lib/components/Modals/ScrollingModal/CustomScrollingModal'
-import ScrollingButton from './lib/components/Modals/ScrollingModal/ScrollingButton'
+import ResizableModal from './lib/components/ResizableModal/ResizableModal'
+import CustomScrollingModal from './lib/components/ScrollingModal/CustomScrollingModal'
+import ScrollingButton from './lib/components/ScrollingModal/ScrollingButton'
 
 const App = () => {
   // Destructure values from the useModal hook

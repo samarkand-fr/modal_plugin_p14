@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../Modal';
+import Modal from '../Modals/Modal';
 
 /**
  * CustomScrollingModal component displaying a modal with custom scrolling content.

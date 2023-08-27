@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
-import './Modal.css';
+import '../../styles/Modal.css';
 
 /**
  * Modal component for displaying overlay content.

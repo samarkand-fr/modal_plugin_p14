@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import ModalHeader from '../ModalHeader.js';
-import ModalContent from '../ModalContent.js';
-import ModalFooter from '../ModalFooter.js';
+import ModalHeader from '../Modals/ModalHeader';
+import ModalContent from '../Modals/ModalContent.js';
+import ModalFooter from '../Modals/ModalFooter.js';
 
 /**
  * ResizableModal component representing a modal with resizable dimensions.
