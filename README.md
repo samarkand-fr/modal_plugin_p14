@@ -10,13 +10,13 @@ A flexible and customizable modal plugin for React applications.
 To use this modal plugin in your React application, you can install it via npm:
 
 ```bash
-npm install modal-plugin
+npm install @jadina/modal-plugin
 ## Usage
 
 import the necessary components and use them in your React application:
 
 import React, { useState } from 'react';
-import { Modal, CustomScrollingModal, ScrollingButton, ResizableModal } from 'modal-plugin';
+import { Modal, CustomScrollingModal, ScrollingButton, ResizableModal } from '@jadina/modal-plugin';
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
