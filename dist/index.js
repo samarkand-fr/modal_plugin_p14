@@ -36,6 +36,6 @@ Object.defineProperty(exports, "useModal", {
 var _Modal = _interopRequireDefault(require("./components/Modals/Modal"));
 var _useModal = _interopRequireDefault(require("./utils/useModal"));
 var _CustomScrollingModal = _interopRequireDefault(require("./components/ScrollingModal/CustomScrollingModal"));
-var _ScrollingButton = _interopRequireDefault(require("./components/ScrollingButton"));
+var _ScrollingButton = _interopRequireDefault(require("./components/ScrollingModal/ScrollingButton"));
 var _ResizableModal = _interopRequireDefault(require("./components/ResizableModal/ResizableModal"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
