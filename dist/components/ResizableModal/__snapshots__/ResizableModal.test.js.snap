@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizableModal renders correctly 1`] = `
+<div>
+  <div
+    class="resizable-modal "
+    style="width: 400px; height: 300px;"
+  >
+    <header
+      class="modalHeader "
+    >
+      <button
+        aria-label="Close"
+        class="modalCloseButton "
+        data-dismiss="modal"
+        type="button"
+      >
+        <i
+          class="fas fa-times"
+        />
+      </button>
+    </header>
+    <section
+      class="modalSection "
+    >
+      Content
+      <button
+        class="close-button"
+      >
+        Close
+      </button>
+    </section>
+    <footer
+      class="modalFooter "
+    />
+    <div
+      class="resizable-handle"
+    />
+  </div>
+</div>
+`;
