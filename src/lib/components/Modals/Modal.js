@@ -1,3 +1,4 @@
+// Import necessary dependencies and styles
 import React, { useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -8,39 +9,38 @@ import '../../styles/Modal.css';
  * Modal component for displaying overlay content.
  *
  * @param {Object} props - Component props.
- * @param {Object} props.isOpen - Object containing `showModal` and `activeModal` boolean values.
+ * @param {boolean} props.isOpen - Boolean indicating if the modal is open
  * @param {Function} props.close - Callback function to close the modal.
- * @param {React.ReactNode} props.children - Child components or elements to be displayed in the modal.
+ * @param {React.ReactNode} props.children - Content to be displayed inside the modal
  * @param {boolean} props.addCloseEscape - Whether to close the modal on Escape key press.
  * @param {boolean} props.addCloseOverlay - Whether to close the modal on clicking outside overlay.
  * @param {boolean} props.addCloseIcon - Whether to show the close icon button.
  * @param {string} props.customClassName - Custom CSS class name for the modal.
  * @param {boolean} props.addFooterButton - Whether to add a footer button.
  * @param {boolean} props.loader - Whether to display the loader.
- * @param {boolean} props.darkTheme - Whether to use the dark theme for the modal.
+ * @param {boolean} props.darkTheme - enable dark theme for the modal
  * @returns {JSX.Element|null} JSX element representing the modal or null.
  */
+
+// Define the Modal component
 const Modal = ({
-  isOpen = {
-    showModal: false,
-    activeModal: '',
-  },
-  close,
-  children,
+  isOpen = false, 
+  close, 
+  children, 
   addCloseEscape = false,
-  addCloseOverlay = false,
-  addCloseIcon = true,
-  customClassName = '',
-  addFooterButton = false,
-  loader = false,
+  addCloseOverlay = false, 
+  addCloseIcon = true, 
+  customClassName = '', 
+  addFooterButton = false, 
+  loader = false, 
   darkTheme = false, 
 }) => {
+  // Callback function to close the modal
   const closeModal = useCallback(() => {
-    if (isOpen) {
-      close();
-    }
-  }, [isOpen, close]);
+    close();
+  }, [close]);
 
+  // Event handler for closing the modal on Escape key press
   const closeModalEvent = useCallback(
     (e) => {
       if (e.key === 'Escape') {
@@ -50,6 +50,7 @@ const Modal = ({
     [closeModal]
   );
 
+  // Add or remove event listener for Escape key press based on the prop
   useEffect(() => {
     if (addCloseEscape) {
       window.addEventListener('keyup', closeModalEvent);
@@ -62,6 +63,7 @@ const Modal = ({
     };
   }, [addCloseEscape, closeModalEvent]);
 
+  // Render the close button if addCloseIcon is true
   const renderCloseButton = addCloseIcon && (
     <button
       aria-label='Close'
@@ -74,6 +76,7 @@ const Modal = ({
     </button>
   );
 
+  // Render the footer button if addFooterButton is true
   const renderFooterButton = addFooterButton && (
     <button
       className={`modalButton ${customClassName ? 'modalButton-' + customClassName : ''}`}
@@ -82,13 +85,15 @@ const Modal = ({
       Close Modal
     </button>
   );
-   return isOpen ? ReactDOM.createPortal(
-    <div 
-      className={`modalOverlay ${customClassName ? 'modalOverlay-' + customClassName : ''}`} 
+
+  // Render the modal content using ReactDOM.createPortal
+  return isOpen ? ReactDOM.createPortal(
+    <div
+      className={`modalOverlay ${customClassName ? 'modalOverlay-' + customClassName : ''}`}
       onClick={addCloseOverlay ? closeModal : null}
-      data-testid="modal-overlay" 
+      data-testid="modal-overlay"
     >
-      <aside 
+      <aside
         className={`modalWrapper ${customClassName ? 'modalWrapper-' + customClassName : ''} ${darkTheme ? 'dark-theme' : ''}`}
       >
         <section className={`modal ${customClassName ? 'modal-' + customClassName : ''}`} onClick={(e) => e.stopPropagation()}>
@@ -111,19 +116,18 @@ const Modal = ({
   ) : null;
 };
 
+// Define prop types for the Modal component
 Modal.propTypes = {
-  isOpen: PropTypes.shape({
-    showModal: PropTypes.bool,
-    activeModal: PropTypes.string,
-  }),
-  close: PropTypes.func.isRequired,
- 
-  addCloseEscape: PropTypes.bool,
-  addCloseOverlay: PropTypes.bool,
-  addCloseIcon: PropTypes.bool,
-  customClassName: PropTypes.string,
-  addFooterButton: PropTypes.bool,
-  loader: PropTypes.bool,
+  isOpen: PropTypes.bool, 
+  close: PropTypes.func.isRequired, 
+  addCloseEscape: PropTypes.bool, 
+  addCloseOverlay: PropTypes.bool, 
+  addCloseIcon: PropTypes.bool, 
+  customClassName: PropTypes.string, 
+  addFooterButton: PropTypes.bool, 
+  loader: PropTypes.bool, 
+  darkTheme: PropTypes.bool, 
 };
 
+// Export the Modal component
 export default Modal;
