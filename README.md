@@ -30,7 +30,7 @@ Manual Setup: Users need to include Font Awesome via a CDN:
   
   -------------------
 
-$${\color{green}Basic\space Modal \space with\space  Custom\space  Content}$$
+$${\color{green}Basic \space Modal\space with\space  Custom\space  Content}$$
   -------
 ```js
 import React  from  'react';
@@ -60,7 +60,7 @@ export  default  App;
   
 ----------
 
-$${\color{green}Resizable\space Modal \space }$$
+$${\color{green}Resizable \space Modal }$$
   -----
 ```js
 
