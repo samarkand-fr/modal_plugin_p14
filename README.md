@@ -31,6 +31,7 @@ Manual Setup: Users need to include Font Awesome via a CDN:
   -------------------
 
 $${\color{green}Basic \space Modal\space with\space  Custom\space  Content}$$
+
   -------
 ```js
 import React  from  'react';
@@ -61,6 +62,7 @@ export  default  App;
 ----------
 
 $${\color{green}Resizable \space Modal }$$
+
   -----
 ```js
 
@@ -129,6 +131,7 @@ export  default  App;
 ------------
 
 $${\color{green}Modal \space with\space Close\space Overlay}$$
+
   ----
 ```js
 import React  from  'react';
@@ -154,6 +157,7 @@ export  default  App;
   ----------------
   
 $${\color{green}Modal \space with\space Close\space Escape}$$
+
 ------
 ```js
 import React  from  'react';
