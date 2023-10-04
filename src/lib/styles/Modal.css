@@ -70,7 +70,7 @@
 
 .modalButton,
 .buttonDefault {
-    background: #cb3b06e4;
+    background:#187d17fc;
     border: none;
     border-radius: .5rem;
     color: #FFF;
@@ -88,8 +88,8 @@
 .modalButton:hover,
 .buttonDefault:hover {
     background: #ffffff;
-    color: #b04128f6;
-    outline: 2px solid #b04128f6;
+    color: #187d17fc;
+    outline: 2px solid #187d17fc;
    
 }
 
@@ -102,11 +102,11 @@
     background-color: #333;
  
   }
-  .scrollable-content {
+.scrollable-content {
     max-height: 100px; /* Adjust the value based on your design */
     overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
     padding: 1rem; /* Add padding for scrolling space */
-    background: #b04128f6;
+    background:#187d17fc;
     color: #ffffff
   }
   
@@ -114,13 +114,13 @@
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .modal {
-      max-width: 90%; /* Adjust as needed */
-      margin: 1rem; /* Add some margin for smaller screens */
+      max-width: 90%; 
+      margin: 1rem; 
     }
     
     .modalFooter {
-      flex-direction: column; /* Stack buttons vertically on smaller screens */
-      align-items: flex-start; /* Align buttons to the left on smaller screens */
+      flex-direction: column; 
+      align-items: flex-start; 
       margin: 1rem;
     }
   }
@@ -150,7 +150,7 @@
   }
   
   .resizable-modal .close-button {
-    background-color: #cb3b06e4;
+    background-color: #187d17fc;
     border: none;
     border-radius: .5rem;
     color: #FFF;
@@ -164,7 +164,7 @@
   
   .resizable-modal .close-button:hover {
     background-color: #ffffff;
-    color: #b04128f6;
+    color: #187d17fc;
   }
   
   img{
